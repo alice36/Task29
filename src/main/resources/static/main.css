@@ -1,0 +1,17 @@
+body {
+    min-height: 300px;
+    padding-top: 60px;
+}
+
+.home-jumbo {
+    background-image: url('../back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+
+.jumbotron img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
