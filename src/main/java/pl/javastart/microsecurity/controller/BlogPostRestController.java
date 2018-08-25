@@ -17,14 +17,14 @@ public class BlogPostRestController {
         this.blogPostRepository = blogPostRepository;
     }
 
-//    @GetMapping
-//    public List<BlogPost> getAllBlogPosts(@RequestParam(required = false) String title) {
-//        if (title==null) {
-//            return blogPostRepository.findAll();
-//        } else {
-//            return blogPostRepository.findBlogPostByTitlePart(title);
-//        }
-//    }
+    @GetMapping
+    public List<BlogPost> getAllBlogPosts(@RequestParam(required = false) String title) {
+        if (title==null) {
+            return blogPostRepository.findAll();
+        } else {
+            return blogPostRepository.findBlogPostByTitlePart(title);
+        }
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<BlogPost> getBlogPost(@PathVariable("id") Long id){
