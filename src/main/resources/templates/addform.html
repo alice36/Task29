@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Mikroblog</title>
@@ -21,6 +21,12 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/administracja">Administracja</a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/login">Zaloguj się</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/register">Zarejestruj się</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -34,7 +40,7 @@
 
     <div class="container">
         <div class="col-6 mx-auto mb-5">
-            <form action="/dodaj" method="post">
+            <form action="/dodaj" method="post" th:object="newPost">
                 <div class="form-group">
                     <label for="titleInput">Tytuł</label>
                     <input name="title" type="text" class="form-control" id="titleInput" placeholder="Pocałuj żabkę w łapkę">
