@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+          integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+<body>
+<div style="width: 600px; margin: auto; border: 1px #ccc solid; padding: 30px">
+    <h6> Lista wpisów</h6>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Tytul</th>
+            <th>Zawartosc</th>
+            <th>Usun</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="blog: ${blogPostList}">
+            <td th:text="${blog.id}"></td>
+            <td th:text="${blog.title}"></td>
+            <td th:text="${blog.content}"></td>
+            <td><a th:href="'/api/posts/' + ${blog.id}">(Delete)</a></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

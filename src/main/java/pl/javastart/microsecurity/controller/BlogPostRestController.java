@@ -36,4 +36,15 @@ public class BlogPostRestController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteBlogPost(@PathVariable("id") Long id){
+
+        Optional<BlogPost> byId = blogPostRepository.findById(id);
+        if(byId.isPresent()) {
+            blogPostRepository.deleteById(id);
+            return ResponseEntity.ok().build();
+        } else
+            return  ResponseEntity.notFound().build();
+    }
 }
