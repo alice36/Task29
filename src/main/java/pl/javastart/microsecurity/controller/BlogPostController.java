@@ -43,7 +43,7 @@ public class BlogPostController {
             model.addAttribute("blogPostList", blogPostList);
             return "admin";}
         else {
-            return "error";
+            return "errorHtml";
         }
     }
 
@@ -51,12 +51,12 @@ public class BlogPostController {
     public String addBlogPost(BlogPost blogPost, Principal principal) {
 
         User byUsername =userRepository.findUserUsingUsername(principal.getName());
-        if(byUsername.getUsername()=="") {
+        if(byUsername.getUsername()!="") {
             blogPostRepository.save(blogPost);
             return "redirect:/";
         } else {
             ResponseEntity.notFound().build();
-            return "error";
+            return "errorHtml";
         }
     }
 

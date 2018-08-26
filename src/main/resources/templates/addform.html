@@ -5,7 +5,7 @@
     <title>Mikroblog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -40,7 +40,7 @@
 
     <div class="container">
         <div class="col-6 mx-auto mb-5">
-            <form action="/dodaj" method="post" th:object="newPost">
+            <form action="/dodaj" method="post" th:object="${newPost}">
                 <div class="form-group">
                     <label for="titleInput">Tytuł</label>
                     <input name="title" type="text" class="form-control" id="titleInput" placeholder="Pocałuj żabkę w łapkę">

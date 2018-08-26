@@ -30,8 +30,4 @@ public class HomeController {
         return "login";
     }
 
-    @PostMapping("/login")
-    public String loginPost(){
-        return "redirect:/";
-    }
 }
