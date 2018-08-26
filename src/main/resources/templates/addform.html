@@ -40,7 +40,7 @@
 
     <div class="container">
         <div class="col-6 mx-auto mb-5">
-            <form action="/dodaj" method="post" th:object="${newPost}">
+            <form th:action="@{/dodaj}" method="post" th:object="${newPost}">
                 <div class="form-group">
                     <label for="title">Tytuł</label>
                     <input th:field="*{title}" type="text" class="form-control" id="title" placeholder="Pocałuj żabkę w łapkę">

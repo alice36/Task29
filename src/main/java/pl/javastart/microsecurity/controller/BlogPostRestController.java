@@ -44,6 +44,7 @@ public class BlogPostRestController {
         if(byId.isPresent()) {
             blogPostRepository.deleteById(id);
             return ResponseEntity.ok().build();
+
         } else
             return  ResponseEntity.notFound().build();
     }

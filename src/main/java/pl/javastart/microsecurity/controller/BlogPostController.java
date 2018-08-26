@@ -41,7 +41,8 @@ public class BlogPostController {
         UserRole userRole = userRoleRepository.findUserRoleUsingUsername(principal.getName());
         if (userRole.getRole().equals("ROLE_ADMIN")){
             model.addAttribute("blogPostList", blogPostList);
-            return "admin";}
+            return "admin";
+        }
         else {
             return "errorHtml";
         }
