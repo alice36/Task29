@@ -55,7 +55,6 @@ public class BlogPostController {
             blogPostRepository.save(blogPost);
             return "redirect:/";
         } else {
-            ResponseEntity.notFound().build();
             return "errorHtml";
         }
     }

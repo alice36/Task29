@@ -42,12 +42,12 @@
         <div class="col-6 mx-auto mb-5">
             <form action="/dodaj" method="post" th:object="${newPost}">
                 <div class="form-group">
-                    <label for="titleInput">Tytuł</label>
-                    <input name="title" type="text" class="form-control" id="titleInput" placeholder="Pocałuj żabkę w łapkę">
+                    <label for="title">Tytuł</label>
+                    <input th:field="*{title}" type="text" class="form-control" id="title" placeholder="Pocałuj żabkę w łapkę">
                 </div>
                 <div class="form-group">
-                    <label for="contentArea">Treść posta</label>
-                    <textarea name="content" class="form-control" id="contentArea" rows="5" placeholder="Co Cię gryzie?"></textarea>
+                    <label for="content">Treść posta</label>
+                    <textarea th:field="*{content}" class="form-control" id="content" rows="5" placeholder="Co Cię gryzie?"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Dodaj</button>
             </form>

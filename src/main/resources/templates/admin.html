@@ -22,7 +22,7 @@
             <td th:text="${blog.id}"></td>
             <td th:text="${blog.title}"></td>
             <td th:text="${blog.content}"></td>
-            <td><a th:href="'/api/posts/' + ${blog.id}">(Delete)</a></td>
+            <td><a th:href="'/api/posts/delete/' + ${blog.id}">(Delete)</a></td>
 
         </tr>
         </tbody>
